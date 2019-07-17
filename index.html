@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>JS For beginners</h1>
+
+<div>
+     <form id="my-form">
+     <h2>Add User</h2>
+
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter name">
+
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Enter email">
+    <input class="button" type="submit" value="Submit" onclick=submitAct();>
+    <script>
+    function submitAct(){
+        // e.preventDefault();
+
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const msg = document.getElementById('msg');
+        const userslsit = document.getElementById('users');
+
+
+        if(nameInput.value == '' || emailInput.value == ''){
+            console.log('error')
+            alert('Please enter fields');
+    
+        }else{
+            console.log('success')
+            alert("Submitted Succesfully");
+
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value}`))
+            userslist.appendChild(li);
+            nameInput.value = ''
+            emailInput.value = '';
+        }
+    
+    }
+ 
+    </script>
+    
+<script src="main.js"></script>
+<script src="ObjectLiteral.js"></script> 
+<script src="ObjectOriented.js"></script> 
+<script src="dom.js"></script> 
+  </form>
+</div>
+
+</body>
+</html>
